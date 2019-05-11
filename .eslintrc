@@ -1,0 +1,27 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "amd": true,
+        "es6": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    },
+    "rules": {
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "no-inner-declarations": "off",
+        "no-constant-condition": "off",
+        "no-console": "off",
+        "linebreak-style": ["error", "windows"]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "presets": ["env"], //automatically determine the Babel plugins and polyfills you need based on your supported environments.
+    "plugins": [
+        ["transform-decorators-legacy"],
+        [
+            "transform-runtime",
+            {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+            }
+        ]
+    ]
+}
