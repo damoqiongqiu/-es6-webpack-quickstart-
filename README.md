@@ -1,4 +1,4 @@
-# 对照 Java 学通 ES6（含 ES7/ES8）
+# 《对照 Java 学通 ES6（含 ES7/ES8）》
 
 ## 用法
 
