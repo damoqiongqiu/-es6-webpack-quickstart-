@@ -2,7 +2,7 @@
     "name": "es6-webpack-quickstart",
     "version": "0.1.0",
     "author": "大漠穷秋",
-    "description": "ES6快速上手（含ES7/ES8）",
+    "description": "对照Java学通ES6（含ES7/ES8）",
     "license": "MIT",
     "keywords": [
         "webpack",

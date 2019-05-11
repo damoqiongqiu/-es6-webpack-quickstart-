@@ -1,14 +1,17 @@
-# ES6+Webpack 快速上手教程
+# 对照 Java 学通 ES6（含 ES7/ES8）
 
 ## 用法
 
+速度考虑，国内开发者推荐使用 cnpm 安装依赖包。
+
+-   npm install -g cnpm --registry=https://registry.npm.taobao.org
 -   cnpm i
 -   npm run start
 
-## 说明
-
-对应的内容结构脑图参见这里：http://naotu.baidu.com/file/547762325c74dabadcc476262298814c?token=7a621251020a7fa1
-
 ## Licence
 
-MIT.
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+采用“保持署名—非商用”创意共享 4.0 许可证。
+
+您可以任意使用此代码，但不可用于任何商业用途。
