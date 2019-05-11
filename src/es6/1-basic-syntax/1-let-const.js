@@ -3,7 +3,7 @@
  * 1. 对比ES5里面的变量定义方式
  * 2. ES6新增的let关键字
  * 3. ES6新增的const关键字
- * 4. 恶心人的TDZ（Temporal dead zone）：与Java做个对比
+ * 4. 恶心的TDZ（Temporal dead zone）：与Java做个对比
  */
 
 /**
@@ -21,6 +21,15 @@ console.log(userName);
     var age = 18;
 }
 console.log(age);
+
+//只有定义在函数内部的变量才不会泄露到外层，这就是“函数级作用域”的局限性
+function testScope() {
+    // console.log(name);//这里会怎么样？
+    var name = "damoqiongqiu";
+}
+console.log(name);
+
+//对比Java里面的情况，Java里面有块级作用域，代码块里面定义的变量不会泄露到外层去
 
 /**
  * 2. ES6新增的let关键字
@@ -59,10 +68,10 @@ const addr = "北京市朝阳区东四环1号朝阳公园";
 // }
 // console.log(myConst);
 
-//4. 恶心人的TDZ（Temporal dead zone）：与Java做个对比
+//4. 恶心的TDZ（Temporal dead zone）：与Java做个对比
 let sum = 0;
 if (1) {
     console.log(`外层的sum>${sum}`); //这里会很恶心
     let sum = sum + 1000;
 }
-//Java里面就没有这个问题，这明显是个设计缺陷，却被当成了feature
+//Java里面就没有这个问题，ES里面明显是个设计缺陷，却被当成了feature，来对比Java里面的实现
