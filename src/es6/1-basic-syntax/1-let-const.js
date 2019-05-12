@@ -1,9 +1,10 @@
 /**
- * 必须熟练掌握的知识点有3个
+ * 这一小节的内容如下：
  * 1. 对比ES5里面的变量定义方式
- * 2. ES6新增的let关键字
- * 3. ES6新增的const关键字
- * 4. 恶心的TDZ（Temporal dead zone）：与Java做个对比
+ * 2. 对比Java里面的变量定义和块级作用域
+ * 3. ES6新增的let关键字
+ * 4. ES6新增的const关键字
+ * 5. 恶心的TDZ（Temporal dead zone）：与Java做对比
  */
 
 /**
@@ -29,17 +30,23 @@ function testScope() {
 }
 console.log(name);
 
+/**
+ * 2. 对比Java里面的变量定义和块级作用域
+ */
 //对比Java里面的情况，Java里面有块级作用域，代码块里面定义的变量不会泄露到外层去
+//在IDEA里面编写并演示对应的Java代码
 
 /**
- * 2. ES6新增的let关键字
- * - 不再支持变量提升，也就是说必须先声明再使用
- * - 同一个作用域内不允许重复的变量名
- * - 可以在语句块中声明函数，在实际开发中不要使用这种方式，因为这种方式会让代码变得很难理解
- * - 建议：在实际开发过程中全部使用let声明变量，可以在eslint的规则里面进行配置
+ * 3. ES6新增的let关键字
  */
 // let userName = 'xiaofei-zhang';//报错，因为前面已经用var声明了同名变量
 // console.log(userName);
+
+function testScope() {
+    // console.log(name);//这里会怎么样？let不会做变量提升
+    let name = "damoqiongqiu";
+}
+console.log(name);
 
 {
     function test() {
@@ -49,7 +56,15 @@ console.log(name);
 }
 
 /**
- * 3. ES6新增的const关键字，语法特性与其它编程语言很类似
+ * 需要熟练掌握的let特性：
+ * - 同一个作用域内不允许重复的变量名
+ * - 可以在语句块中声明函数，在实际开发中不要使用这种方式，因为这种方式会让代码变得很难理解
+ * - 不再支持变量提升，也就是说必须先声明再使用
+ * - 建议：在实际开发过程中全部使用let声明变量，可以在eslint的规则里面进行配置
+ */
+
+/**
+ * 4. ES6新增的const关键字
  * - 声明时必须立即赋值
  * - 声明之后不可再修改
  * - 遵守块级作用域规则
@@ -68,10 +83,12 @@ const addr = "北京市朝阳区东四环1号朝阳公园";
 // }
 // console.log(myConst);
 
-//4. 恶心的TDZ（Temporal dead zone）：与Java做个对比
-let sum = 0;
-if (1) {
-    console.log(`外层的sum>${sum}`); //这里会很恶心
-    let sum = sum + 1000;
+/**
+ * 5. 恶心的TDZ（Temporal dead zone）：与Java做对比
+ */
+let userName = "damoqiongqiu";
+{
+    console.log(`尝试访问外层定义的userName>${userName}`); //这里会很恶心，访问不成功
+    let userName = "大漠穷秋";
 }
 //Java里面就没有这个问题，ES里面明显是个设计缺陷，却被当成了feature，来对比Java里面的实现
