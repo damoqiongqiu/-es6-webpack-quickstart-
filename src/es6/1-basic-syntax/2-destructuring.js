@@ -21,15 +21,15 @@ let [d, e] = [4, 5, 6];
 console.log(d);
 console.log(e);
 
+let [f, [g]] = [7, [8, 9, 10]];
+console.log(f);
+console.log(g);
+
 //两边参数数量不同的时候，变量可以带默认值
 let [name, age, addr = "北京市"] = ["damoqiongqiu", 18];
 console.log(name);
 console.log(age);
 console.log(addr);
-
-let [f, [g]] = [7, [8, 9, 10]];
-console.log(f);
-console.log(g);
 
 //带rest运算符的情况
 let [h, ...i] = [1, 2, 3, 4, 5];
@@ -95,12 +95,6 @@ console.log(year);
 let { toString: str } = 123;
 console.log(str == Number.prototype.toString);
 //str是别名，123会首先转成包装型Number，然后获取上面对应的toString属性，然后再赋值给别名str
-
-//对象解构过程中也可以利用rest操作符
-let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
-console.log(a);
-console.log(g);
-console.log(rest);
 
 /**
  * 3. 字符串解构赋值
