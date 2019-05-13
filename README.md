@@ -8,6 +8,10 @@
 -   cnpm i
 -   npm run start
 
+## 问题/勘误反馈
+
+<img src="./src/assets/imgs/es6.png" width="280">
+
 ## Licence
 
 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
