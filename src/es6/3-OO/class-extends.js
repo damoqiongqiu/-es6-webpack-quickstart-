@@ -5,6 +5,9 @@
  */
 
 class Animal {
+    name = "默认的名字";
+    age;
+
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -13,7 +16,7 @@ class Animal {
     eat() {
         console.log(`动物吃东西>${this.name}`);
     }
-    
+
     run() {
         console.log(`动物运动>${this.name}`);
     }
@@ -24,7 +27,7 @@ class Animal {
     }
 
     toString() {
-        return '(' + this.name + ', ' + this.age + ')';
+        return "(" + this.name + ", " + this.age + ")";
     }
 }
 
@@ -47,6 +50,7 @@ class Person extends Animal {
 }
 
 let person = new Person("大漠穷秋", 18);
+console.log(person.name);
 person.eat();
 person.run();
 person.coding();
