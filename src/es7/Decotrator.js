@@ -37,8 +37,6 @@ function readonly(target, name, descriptor) {
     styleURLs: ["./user-list.css"]
 })
 class UserListComponent {
-    //不能定义实例属性
-
     @readonly
     getPages() {
         return 10;
