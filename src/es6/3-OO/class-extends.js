@@ -7,6 +7,7 @@
 class Animal {
     name = "默认的名字";
     age;
+    addr;
 
     constructor(name, age) {
         this.name = name;
@@ -31,7 +32,13 @@ class Animal {
     }
 }
 
-class Person extends Animal {
+class Monkey extends Animal{
+    constructor(name, age) {
+        super(name, age);
+    }
+}
+
+class Person extends AniMonkeymal {
     constructor(name, age) {
         super(name, age);
     }

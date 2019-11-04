@@ -19,6 +19,7 @@
  */
 let arr = ['a', 'b', 'c'];
 let iter = arr[Symbol.iterator]();
+//iter.hasNext()
 iter.next();
 iter.next();
 iter.next();

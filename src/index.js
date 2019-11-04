@@ -1,6 +1,6 @@
-import "./es6/1-basic-syntax/1-let-const";
+// import "./es6/1-basic-syntax/1-let-const";
 // import './es6/1-basic-syntax/2-destructuring';
-// import './es6/2-build-in-types/string';
+import './es6/2-build-in-types/1-String';
 // import './es6/2-build-in-types/array';
 // import './es6/2-build-in-types/function';
 // import './es6/2-build-in-types/object';

@@ -29,7 +29,7 @@ while (!result.done) {
     result = iterator.next();
 }
 
-//2. Generator基本用法
+//2. Generator 基本用法
 function* testGenerator() {
     yield "大漠"; //这里的含义是：返回一个字符串"大漠"出去，然后【让出】函数的执行权，等待下一次next()调用
     yield "穷秋";
@@ -46,6 +46,7 @@ console.log(iter.next());
 console.log(iter.next());
 //这里的yield的含义是【让出】，与Java多线程编程中的yield()方法含义是一样的
 
+//SEQ，前端自增ID
 //3. 既然调用next()的时候才会继续执行下一步，那么就可以构造一个永不结束的Generator
 function* naturalNumbers() {
     let num = 1;
@@ -73,6 +74,8 @@ user[Symbol.iterator] = function*() {
     }
 };
 console.log(...user);
+
+//所有对象全部可以...
 
 //5. for...of会在内部隐含使用迭代器Iterator，所以可以直接用for...of来遍历Generator
 function* foo() {
@@ -138,13 +141,13 @@ function* myBz() {
     console.log(p2);
 }
 
-// let bzIter=myBz();
-// bzIter.next().value.then(function(result){
-//     bzIter.next().value.then(function(result){
-//         bzIter.next();
-//         //...
-//     });
-// });
+let bzIter=myBz();
+bzIter.next().value.then(function(result){
+    bzIter.next().value.then(function(result){
+        bzIter.next();
+        //...
+    });
+});
 
 //递归执行
 function runner(generator) {
